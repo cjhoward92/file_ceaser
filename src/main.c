@@ -89,7 +89,7 @@ static int closefile(FILE *fd) {
 
 static size_t read_file(FILE *fd, char **out) {
   const size_t BUFSIZE = 1024;
-  size_t buflen, curlen;
+  size_t buflen, curlen = 0;
   size_t maxlen = BUFSIZE;
 
   char *buf = (char *)malloc(BUFSIZE);
